@@ -1,3 +1,13 @@
 //digit button component
-
-export default function DigitBtn({ dispatch, digit }) {}
+import { ACTIONS } from "./App";
+export default function DigitBtn({ dispatch, digit }) {
+  return (
+    <button
+      onClick={() => {
+        dispatch({ type: ACTIONS.ADD_NO, payload: { digit } });
+      }}
+    >
+      {digit}
+    </button>
+  );
+}
